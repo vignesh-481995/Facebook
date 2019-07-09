@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Facebook – log in or sign up</title>
+  <link rel="icon" type="image/ico" href="./images/f.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+        var getsession = JSON.parse(sessionStorage.getItem("loginusers")) ;
+        if(getsession.Username){
+            document.location.href = "profile.html";
+          
+        }
+
+    </script>
+  
+  <style>
+    .navbar-inverse,.bgimg {
+        background-color: #3b5999;
+        border-color: #3b5999;
+    }
+    @media screen and (min-width: 768px) {
+    .navbar{
+        height: 82px;
+        min-width: 980px
+    }
+    .titlelogo{
+        margin-left: 158px !important;
+    }
+    .navbar-right {
+        float: right!important;
+        margin-right: 207px;
+    }
+    .contents{
+
+        width: 450px;
+        word-spacing: -1px;
+
+    }
+    }
+    table tr td {
+        padding: 0 0 0 14px;
+    }
+    .logintd{
+        padding-bottom: 4px;
+        font-size: 12px;
+    }
+    .customtable{
+        margin-top: 10px;
+    }
+    .logintd label{
+        color: #fff;
+        font-weight: normal;
+        padding-left: 1px;
+    }
+    table tr td .customtext{
+        border-color: #1d2a5b;
+        margin: 0;
+        width: 142px;
+    }
+    table tr td button{
+        color: #fff;
+        background-color: #4267b2;
+        border-color: #29487d;
+        border: 1px solid #29487d;
+        border-radius: 2px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 12px;
+        
+        font-weight: bold;
+        line-height: 18px;
+        padding: 2px 6px;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: none;
+        vertical-align: top;
+        white-space: nowrap;
+    }
+    .emailtext,.passwordtext{
+        padding-bottom: 4px;
+        
+        border: 1px solid #ccd0d5;
+        border-radius: 0;
+        margin: 0;
+        padding: 3px;
+        height: 22px;
+    }
+    .forgot{
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        color: #9cb4d8;
+    }
+    .forgot a{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .forgot a:hover{
+        color: #9cb4d8;
+        text-decoration: underline;
+    }
+    .loginbg{
+        background: linear-gradient(white, #D3D8E8);
+    }
+    .contents{
+        
+        color: #0e385f;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 29px;
+        margin-top: 40px;
+        margin-left: 20px;
+        float: right;
+
+    }
+    .map{
+        float: right;
+        position: relative;
+        margin-left: 20px;
+    left: 67px;
+    }
+    .title1{
+        font-size: 36px;
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    .title2{
+        color: #1d2129;
+        font-size: 19px;
+        font-weight: normal;
+    }
+    .forms{
+        padding: 20px;
+        padding-left: 40px;
+    }
+    .formfields{
+        margin-top: 20px;
+    }
+    .form-field{
+        width: 172px !important;
+        font-size: 18px;
+        padding: 8px 10px;
+        border-color: #bdc7d8;
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    .email-form-field{
+        width: 347px !important;
+        font-size: 18px;
+        padding: 8px 10px;
+        border-color: #bdc7d8;
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    .form-selectfield{
+        width: 172px !important;
+        font-size: 15px;
+        padding: 8px 10px;
+        border-color: #bdc7d8;
+        border-radius: 5px;
+        margin: 0;
+        color: #999999;
+    }
+
+    .terms{
+        width: 399px;
+        font-size: 12px;
+        color: #999999; 
+    }
+
+    .fbuttons{
+        background: linear-gradient(#67ae55, #578843);
+        background-color: #69a74e;
+        box-shadow: inset 0 1px 1px #a4e388;
+        border-color: #3b6e22 #3b6e22 #2c5115;
+        min-width: 194px;
+        padding: 7px 20px;
+        text-align: center;
+        font-size: 19px;
+        margin-top: 10px;
+        
+    }
+
+    .row{
+        margin-right: 0px !important;
+    }
+
+    /* Popover */
+  .popover {
+    background-color: #b94a48;
+    border: 1px solid #b94a48;
+  }
+  /* Popover Header */
+  .popover-title {
+    background-color: #b94a48; 
+    color: #FFFFFF; 
+    font-size: 28px;
+    text-align:center;
+  }
+  /* Popover Body */
+  .popover-content {
+    background-color: #b94a48; 
+    color: #FFFFFF; 
+    font-size: 14px;
+    text-align:center;
+  }
+  /* Popover Arrow */
+  .arrow {
+    
+    border-right-color: #b94a48;
+  }
+  .popover.left>.arrow:after {
+    border-left-color:#b94a48 !important;
+  }
+  .popover.bottom>.arrow:after {
+      border-bottom-color: #b94a48 !important;
+  }
+    
+  </style>
+</head>
+<body>
+        <div class="container-fluid bgimg">
+    <dvi class=" col-md-12 col-sm-12 col-lg-12 col-xs-12 ">
+    <nav class="navbar navbar-inverse">
+        
+          <div class="navbar-header">
+                <a href="#" title="Facebook Home Page" class="navbar-brand titlelogo"><img src="./images/fb.png" style="width: 164px;" /></a>
+          </div>
+          
+          <div class="nav navbar-nav navbar-right">
+                <table class="customtable">
+                    <tr>
+                        <td class="logintd"><label>Email</label> </td>
+                        <td class="logintd"><label>Password</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="customtext emailtext" id="loginusername"   data-toggle="popover" data-placement="left" data-content="What's Your Email?"></td>
+                        <td><input type="password" class="customtext passwordtext" id="loginpassword"    data-toggle="popover" data-placement="bottom" data-content="Please Enter Password"></td>
+                        <td><button onclick="validlogin(event)">Log In</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="forgot"><a href="#">Forgotten account?</a></td>
+                    </tr>
+                </table>
+          </div>
+        
+      </nav>
+    </dvi>
+</div>
+        
+      <div class="row loginbg">
+            <div class="col-md-6">
+                <div class="contents">Facebook helps you connect and share with the people in your life.</div>
+                <img class="img map" src="./images/map.png" alt="" height="195">
+            </div>
+            <div class="col-md-6 forms">
+                    <div class="formtitle">
+                        <div class="title1">
+                            <span>Create an account</span>
+                        </div>
+                        <div class="title2">
+                            It's free and always will be.
+                        </div>
+                    </div>
+                    <div class="formfields">
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control form-field" id="username" placeholder="Username"  data-toggle="popover" data-placement="left" data-content="What's Your Username?">
+                            <input type="password" class="form-control form-field" id="password" placeholder="Password"  data-toggle="popover" data-placement="bottom" data-content="What's Your Password?">
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control email-form-field" id="emailid" placeholder="Email Id"  data-toggle="popover" data-placement="left" data-content="What's Your Email Id?">
+                            
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control form-field" id="birthcity" placeholder="Birth City">
+                            <input type="text" class="form-control form-field" id="currentcity" placeholder="Current City">
+                        </div>
+                        <div class="form-group form-inline">
+                            <select class="form-control form-selectfield" id="state">
+                                <option>Select State</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Orissa">Orissa</option>
+                                    <option value="Pondicherry">Pondicherry</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttaranchal">Uttaranchal</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="West Bengal">West Bengal</option>
+                            </select>
+                            <select class="form-control form-selectfield" id="country">
+                                    <option>Select Country</option>
+                                    <option value="India">India</option>
+                                    
+                            </select>
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control form-field" id="jobrole" placeholder="Job Role">
+                            <input type="text" class="form-control form-field" id="organization" placeholder="Organization">
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control form-field" id="college" placeholder="College">
+                            <input type="text" class="form-control form-field" id="school" placeholder="School">
+                        </div>
+                        <div class="terms">
+                            <p class="_58mv">By clicking Sign Up, you agree to our 
+                                <a href="#" >Terms</a>,
+                                 <a href="#" >Data Policy</a> 
+                                 and <a href="#" >Cookie Policy</a>. 
+                                 You may receive SMS notifications from us and can opt out at any time.</p>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-primary fbuttons"  id="submit" onclick="Add()">Sign Up</button>
+                            
+                        </div>
+                    </div>
+            </div>
+      </div>
+
+</body>
+</html>
+<script>
+
+        var userslist = localStorage.getItem("users");
+        var userslist1 = JSON.parse(userslist);
+       
+        if(userslist1 == null) {
+            userslist1=[{Username    : 'vignesh',Password  : '1234',Emailid  : 'vignesh@gmail.com',Birthcity    : 'chennai',Currentcity  : 'bangalore',
+                State    : 'tamilnadu',country  : 'india',Jobrole    : 'Software Developer',Organization  : 'Enterprise Touch',
+                School    : 'National Higher Sec School',College  : 'Sri sairam',},
+                {Username    : 'vicky',Password  : '1234',Emailid  : 'vicky@gmail.com',Birthcity    : 'chennai',Currentcity  : 'bangalore',
+                State    : 'tamilnadu',country  : 'india',Jobrole    : 'Software Developer',Organization  : 'Enterprise Touch',
+                School    : 'National Higher Sec School',College  : 'Sri sairam',},
+                {Username    : 'vengatesh',Password  : '1234',Emailid  : 'vengat@gmail.com',Birthcity    : 'chennai',Currentcity  : 'bangalore',
+                State    : 'tamilnadu',country  : 'india',Jobrole    : 'Software Developer',Organization  : 'Enterprise Touch',
+                School    : 'National Higher Sec School',College  : 'Sri sairam',},
+                {Username    : 'vengat',Password  : '1234',Emailid  : 'vengatesh@gmail.com',Birthcity    : 'chennai',Currentcity  : 'bangalore',
+                State    : 'tamilnadu',country  : 'india',Jobrole    : 'Software Developer',Organization  : 'Enterprise Touch',
+                School    : 'National Higher Sec School',College  : 'Sri sairam',}];
+            /*var client = JSON.stringify(
+                {Username    : 'vignesh',Password  : '1234',Emailid  : 'vignesh@gmail.com',Birthcity    : 'chennai',Currentcity  : 'bangalore',
+                State    : 'tamilnadu',country  : 'india',Jobrole    : 'Software Developer',Organization  : 'Enterprise Touch',
+                School    : 'National Higher Sec School',College  : 'Sri sairam',}
+                );*/
+
+            //userslist1.push(client);
+            //localStorage.setItem("users", JSON.stringify(userslist1));
+        }
+            
+    
+        function Add(){
+            var titles=document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("emailid").value;
+            if(titles =="" || password=="" || email ==""){
+                if(titles ==""){
+                $("#username").popover('show');
+                }else if(password ==""){
+                $("#password").popover('show');
+                }else if(email ==""){
+                $("#emailid").popover('show');    
+                }
+            }else{
+                var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+                if (reg.test(email) == false) 
+                {
+                    $("#emailid").attr('data-content','Please enter a valid  email address.');
+                    $("#emailid").popover('show');
+                    
+                    return false;
+                }
+                var client = JSON.stringify({
+    
+                Username    : document.getElementById("username").value,
+                Password  : document.getElementById("password").value,
+                Emailid  : document.getElementById("emailid").value,
+                Birthcity    : document.getElementById("birthcity").value,
+                Currentcity  : document.getElementById("currentcity").value,
+                State    : document.getElementById("state").value,
+                country  : document.getElementById("country").value,
+                Jobrole    : document.getElementById("jobrole").value,
+                Organization  : document.getElementById("organization").value,
+                School    : document.getElementById("school").value,
+                College  : document.getElementById("college").value,
+
+                });
+
+                userslist1.push(client);
+                localStorage.setItem("users", JSON.stringify(userslist1));
+                location.reload();
+            }
+            
+            
+        
+        }
+
+    function validlogin(event) {
+        
+        var username = document.getElementById('loginusername').value;
+        var password = document.getElementById('loginpassword').value;
+        if(username =="" || password==""){
+            if(username ==""){
+                $("#loginusername").popover('show');
+            }else if(password ==""){
+                $("#loginpassword").popover('show');
+            }
+        
+        }else{
+
+        if(username !=""){
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(username) == false) 
+        {
+            $("#loginusername").attr('data-content','Please enter a valid  email address.');
+            $("#loginusername").popover('show');
+            
+            return false;
+        }
+        var res = localStorage.getItem('users');
+        if (!res) {
+            alert("Nothing stored!");
+            event.preventDefault();
+            return;
+        }
+        
+        var allEntries = JSON.parse(res);
+        
+        for (var i = 0; i < allEntries.length; i++) {
+            //var sessionstore=allEntries[i];
+            var entry = JSON.parse(allEntries[i]);
+            var storedUserName = entry.Emailid;
+            var storedPassWord = entry.Password;
+            
+            if (username == storedUserName && password == storedPassWord) {
+                sessionStorage.setItem("loginusers", JSON.stringify(entry));
+                document.location.href = "profile.html";
+                //var getsession = JSON.parse(sessionStorage.getItem("loginusers")) ;
+                //console.log(getsession.Username);
+                //alert("Successfully logged in!");
+                return;
+            }
+        }
+        }
+        }
+    }
+    $(document).ready(function(){
+        $('#username').keyup(function(){
+            $("#username").popover('hide');
+        });
+        $('#password').keyup(function(){
+            $("#password").popover('hide');
+        });
+        $('#emailid').keyup(function(){
+            $("#emailid").popover('hide');
+        });
+        $('#loginusername').keyup(function(){
+            $("#loginusername").popover('hide');
+        });
+        $('#loginpassword').keyup(function(){
+            $("#loginpassword").popover('hide');
+        });
+    });
+    function Back(){
+      window.location.href="admin.html";
+    
+    }
+    </script>

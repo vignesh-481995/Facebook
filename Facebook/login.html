@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Facebook – log in or sign up</title>
+  <link rel="icon" type="image/ico" href="./images/f.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Css Part -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./login.css">
+  <!-- js part -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./login.js"></script>
+  
+  
+</head>
+<body>
+    <!-- nav bar header part -->
+    <div class="container-fluid bgimg">
+        <dvi class=" col-md-12 col-sm-12 col-lg-12 col-xs-12 ">
+            <nav class="navbar navbar-inverse">
+                
+                <div class="navbar-header">
+                        <a href="#" title="Facebook Home Page" class="navbar-brand titlelogo"><img src="./images/fb.png" style="width: 164px;" /></a>
+                </div>
+                
+                <div class="nav navbar-nav navbar-right">
+                        <table class="customtable">
+                            <tr>
+                                <td class="logintd"><label>Email</label> </td>
+                                <td class="logintd"><label>Password</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" class="customtext emailtext" id="loginusername"   data-toggle="popover" data-placement="left" data-content="What's Your Email?"></td>
+                                <td><input type="password" class="customtext passwordtext" id="loginpassword"    data-toggle="popover" data-placement="bottom" data-content="Please Enter Password"></td>
+                                <td><button onclick="validlogin(event)">Log In</button></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="forgot"><a href="#">Forgotten account?</a></td>
+                            </tr>
+                        </table>
+                </div>
+                
+            </nav>
+        </dvi>
+    </div>
+    <!-- Main content -->   
+        <div class="row loginbg">
+            <div class="col-md-6">
+                <div class="contents">Facebook helps you connect and share with the people in your life.</div>
+                <img class="img map" src="./images/map.png" alt="" height="195">
+            </div>
+            <!-- Sign up Form -->
+            <div class="col-md-6 forms">
+                    <div class="formtitle">
+                        <div class="title1">
+                            <span>Create an account</span>
+                        </div>
+                        <div class="title2">
+                            It's free and always will be.
+                        </div>
+                    </div>
+                    <div class="formfields">
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control form-field" id="username" placeholder="Username"  data-toggle="popover" data-placement="left" data-content="What's Your Username?">
+                            <input type="password" class="form-control form-field" id="password" placeholder="Password"  data-toggle="popover" data-placement="bottom" data-content="What's Your Password?">
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control email-form-field" id="emailid" placeholder="Email Id"  data-toggle="popover" data-placement="left" data-content="What's Your Email Id?">
+                            
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control form-field" id="birthcity" placeholder="Birth City">
+                            <input type="text" class="form-control form-field" id="currentcity" placeholder="Current City">
+                        </div>
+                        <div class="form-group form-inline">
+                            <select class="form-control form-selectfield" id="state">
+                                <option>Select State</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Orissa">Orissa</option>
+                                    <option value="Pondicherry">Pondicherry</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttaranchal">Uttaranchal</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="West Bengal">West Bengal</option>
+                            </select>
+                            <select class="form-control form-selectfield" id="country">
+                                    <option>Select Country</option>
+                                    <option value="India">India</option>
+                                    
+                            </select>
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control form-field" id="jobrole" placeholder="Job Role">
+                            <input type="text" class="form-control form-field" id="organization" placeholder="Organization">
+                        </div>
+                        <div class="form-group form-inline">
+                            <input type="text" class="form-control form-field" id="college" placeholder="College">
+                            <input type="text" class="form-control form-field" id="school" placeholder="School">
+                        </div>
+                        <div class="terms">
+                            <p class="_58mv">By clicking Sign Up, you agree to our 
+                                <a href="#" >Terms</a>,
+                                 <a href="#" >Data Policy</a> 
+                                 and <a href="#" >Cookie Policy</a>. 
+                                 You may receive SMS notifications from us and can opt out at any time.</p>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-primary fbuttons"  id="submit" onclick="Add()">Sign Up</button>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+</body>
+</html>

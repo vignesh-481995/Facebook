@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Facebook- Profile Edit</title>
+  <link rel="icon" type="image/ico" href="./images/f.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Css Part -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./profileedit.css">
+  <!-- Js Part -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./profileedit.js"></script>
+  <script src="./common.js"></script>
+  <!-- Font Part -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+<body>
+
+    <!-- Navbar Header Part -->
+    <div class="container-fluid navbg">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 ">
+            <div class="col-md-6 col-sm-12  col-xs-12">
+                <div  class="col-md-1 col-sm-2 col-xs-2">
+                        <img class="img fbicon " src="./images/download.png" alt="" >
+                </div>
+                <div  class="col-md-8 col-sm-8 col-xs-10">
+                        <div class="form-group" style="margin-bottom:0px;">
+                                <div class="input-group">
+                                    <input type="text" class="form-control "
+                                           placeholder="Search" id="inputGroup"/>
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                </div>
+                    
+                    
+            </div>
+            <div class="col-md-6 col-sm-12  col-xs-12">
+                <div class="media col-sm-6 col-xs-6 col-md-3">
+                            <div class="media-left">
+                              <img src="./images/dhoni.jpg" class="media-object img" style="width: 30px;
+                              border-radius: 50%;">
+                            </div>
+                            <div class="media-body">
+                              <a href="profile.html" class="ptitle uname"></a>
+                            </div>
+                </div>
+               <div class="col-md-9">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
+                      </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                        
+                          <li><a href="./profile.html" title="Home">Home</a></li>
+                          <li><a href="#">Create</a></li>
+                          <li><a href="./activity.html" title="Activity Log" >Activity Log</a></li>
+                          <li><a href="#" onclick="logout()" title="Logout">Logout</a></li>
+                          <!--<li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-caret-down carets" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Activity Blog</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                          </li>-->
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                  </div> 
+            </div>
+            
+        </div>
+    </div>
+    <!--Profile Part -->
+    <div class="container contentmain">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 maincontent " style="height: 380px;">
+            <div class="col-md-9"  >
+                <div class="coverBorder"></div>
+                <img class="img" src="./images/dfb.jpg" alt="" width="845px" height="315px" style="margin-left: -14px;" >
+            </div>
+            <div class="col-md-9 sublinks"  >
+                    <div class="col-md-offset-3 col-md-9">
+                            <nav class="navbar">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>                        
+                                        </button>
+                                        
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="myNavbar1">
+                                        <ul class="nav navbar-nav">
+                                          <li><a href="#">Timeline   <i class="fa fa-caret-down carets" aria-hidden="true"></i></a></li>
+                                          <li><a href="#">About</a></li>
+                                          <li><a href="#">Friends</a></li>
+                                          <li><a href="#">Photos</a></li>
+                                          <li><a href="#">Archive</a></li>
+                                          <li><a href="#">More   <i class="fa fa-caret-down carets" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </nav>
+                    </div>
+            </div>
+
+            <span class="col-md-9 Profileimg"  >
+                <div class="col-md-3 aa">
+                    <div  class="ratio img-responsive img-circle " 
+                    style="background-image: url(./images/dhoni.jpg);">
+                  </div></div>
+                  <div class="col-md-3">
+                    <span class="uname profilename"></span>
+                  </div>
+                <div class=" col-md-6 pbuttons">
+                    <a href="./profileedit.html" class="editprofile" title="Edit Page"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Profile</a>
+                    <a href="./activity.html" class="activitylog" title="Activity Page"><i class="fa fa-list-ul" aria-hidden="true"></i> Activity Log <span class="badge">5</span><i class="fa fa-ellipsis-h ellipsis" aria-hidden="true"></i></a>
+                </div>
+            </span>
+            
+
+        </div>
+    </div>
+    <!-- Main Content Part -->
+    <div class="container submaincontents">
+        <div class="col-md-9 submaincontent ">
+            <div class="well"> <i class="fa fa-user user" aria-hidden="true"></i> <span class="about"> About</span></div>
+            <div class="col-md-12 detailtabs notpadding">
+                  <div class="col-md-4 notpadding">
+                        <ul class="nav nav-tabs  tabs-left"> 
+                                <li class="active"><a data-toggle="tab" href="#home">Overview</a></li>
+                                <li><a data-toggle="tab" href="#menu1">Personal Detail</a></li>
+                                <li><a data-toggle="tab" href="#menu2">Education</a></li>
+                                <li><a data-toggle="tab" href="#menu3">Job Detail</a></li>
+                        </ul>
+                  </div>
+                  <div class="col-md-7 notpadding">
+                        <div class="tab-content">
+                                <div id="home" class="tab-pane fade in active">
+                                    <ul>
+                                        <li><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;&nbsp; 
+                                            <span >Email </span> <a href="#" class="textformat emails"></a></li>
+                                        <li><i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp;&nbsp; 
+                                            <span >Software Development Engineer at </span> <a href="#" class="textformat organization"></a></li>
+                                        <li><i class="fa fa-briefcase"></i> &nbsp;&nbsp; 
+                                            <span class="jobrole">   </span> at <a href="#" class="textformat organization"></a></li>
+                                        <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp;&nbsp; 
+                                            <span >College at </span> <a href="#" class="textformat college"></a></li>
+                                        <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp;&nbsp; 
+                                            <span>School at </span>  <a href="#" class="textformat school"></a></li>
+                                        <li><i class="fa fa-home" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; 
+                                            <span >  Lives in </span>  <a href="#" class="textformat "><span class="live"></span><span class="country"></span></a></li>
+                                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp;&nbsp; 
+                                            <span>  From  </span> <a href="#" class="textformat from"></a></li>
+                                    </ul>
+                                </div>
+                                <div id="menu1" class="tab-pane fade">
+                                    <ul>
+                                        <li><label>Username </label><input type="text" id="username" data-placement="bottom"></li>
+                                        <li><label>Current Password </label><input type="password" id="confirmpassword" placeholder="Current Password" data-placement="left"></li>
+                                        <li><label>New Password</label><input type="password" id="newpassword"  placeholder="New Password"></li>
+                                        <li><label>Email Id</label><input type="text" id="emailid"></li>
+                                        <li><label>Birth City</label><input type="text" id="birthcity"></li>
+                                        <li><label>Current City </label><input type="text" id="currentcity"></li>
+                                        <li><label>State </label><input type="text" id="state"></li>
+                                        <li><label>Country </label><input type="text" id="country"></li>
+                                        <li><button class="schanges" onclick="profile()" >Save Changes</button><button onclick="back()">Cancel</button></li>
+                                    </ul>
+                                </div>
+                                <div id="menu2" class="tab-pane fade">
+                                        <ul>
+                                                <li><label>College </label><input type="text" id="college"></li>
+                                                <li><label>School </label><input type="text" id="school"></li>
+                                                <li><button class="schanges" onclick="education()" >Save Changes</button><button onclick="back()" >Cancel</button></li>
+                                    
+                                        </ul>
+                                </div>
+                                <div id="menu3" class="tab-pane fade">
+                                        <ul>
+                                                <li><label>Job Role </label><input type="text" id="jobrole"></li>
+                                                <li><label>Organisation </label><input type="text" id="organisation"></li>
+                                                <li><button class="schanges" onclick="job()" >Save Changes</button><button  onclick="back()" >Cancel</button></li>
+                                    
+                                        </ul>
+                                </div>
+                              </div>
+                  </div> 
+  
+                  </div>
+                  
+        </div>
+    </div>
+   

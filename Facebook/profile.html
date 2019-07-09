@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Facebook- Profile</title>
+  <link rel="icon" type="image/ico" href="./images/f.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Css Part -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./profile.css">
+  <!-- Js Part -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./profile.js"></script>
+  <script src="./common.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body onload="onpost()" >
+    <!-- Navbar Header Part -->
+    <div class="container-fluid navbg">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 ">
+            <div class="col-md-6 col-sm-12  col-xs-12">
+                <div  class="col-md-1 col-sm-2 col-xs-2">
+                        <img class="img fbicon " src="./images/download.png" alt="" >
+                </div>
+                <div  class="col-md-8 col-sm-8 col-xs-10">
+                        <div class="form-group" style="margin-bottom:0px;">
+                                <div class="input-group">
+                                    <input type="text" class="form-control "
+                                           placeholder="Search" id="inputGroup"/>
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                </div>
+                    
+                    
+            </div>
+            <div class="col-md-6 col-sm-12  col-xs-12">
+                <div class="media col-sm-6 col-xs-6 col-md-3">
+                            <div class="media-left">
+                              <img src="./images/dhoni.jpg" class="media-object img" style="width: 30px;
+                              border-radius: 50%;">
+                            </div>
+                            <div class="media-body mediatitle">
+                              <a href="profile.html" class="ptitle uname"></a>
+                              
+                            </div>
+                </div>
+               <div class="col-md-9">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
+                      </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                        
+                          <li><a href="profile.html" title="Home">Home</a></li>
+                          <li><a href="#">Create</a></li>
+                          <li><a href="activity.html" title="Activity Log">Activity Log</a></li>
+                          <li><a href="#"onclick="logout()" title="Logout"> Logout</a></li>
+                          <!--<li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-caret-down carets" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Activity Blog</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                          </li>-->
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                  </div> 
+            </div>
+            
+        </div>
+    </div>
+    <!-- Profile Picture Content Part -->
+    <div class="container contentmain">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 maincontent " style="height: 380px;margin-top: 20px;">
+            <div class="col-md-9"  >
+                <div class="coverBorder"></div>
+                <img class="img" src="./images/dfb.jpg" alt="" width="845px" height="315px" style="margin-left: -14px;" >
+            </div>
+            <div class="col-md-9 sublinks"  >
+                    <div class="col-md-offset-3 col-md-9">
+                            <nav class="navbar">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>
+                                          <span class="icon-bar"></span>                        
+                                        </button>
+                                        
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="myNavbar1">
+                                        <ul class="nav navbar-nav">
+                                          <li><a href="#">Timeline   <i class="fa fa-caret-down carets" aria-hidden="true"></i></a></li>
+                                          <li><a href="#">About</a></li>
+                                          <li><a href="#">Friends</a></li>
+                                          <li><a href="#">Photos</a></li>
+                                          <li><a href="#">Archive</a></li>
+                                          <li><a href="#">More   <i class="fa fa-caret-down carets" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </nav>
+                    </div>
+            </div>
+
+            <span class="col-md-9 Profileimg"  >
+                <div class="col-md-3">
+                    <div  class="ratio img-responsive img-circle profileimg" 
+                    style="background-image:  url(./images/dhoni.jpg);">
+                  </div></div>
+                  <div class="col-md-3">
+                    <span class="uname profilename"></span>
+                  </div>
+                <div class=" col-md-6 pbuttons">
+                    <a href="profileedit.html" class="editprofile"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Profile</a>
+                    <a href="activity.html" class="activitylog"><i class="fa fa-list-ul" aria-hidden="true"></i> Activity Log <span class="badge">5</span><i class="fa fa-ellipsis-h ellipsis" aria-hidden="true"></i></a>
+                </div>
+            </span>
+            
+
+        </div>
+    </div>
+    <!-- Main Content Part -->
+    <div class="container submaincontents">
+        <div class="col-md-9 submaincontent ">
+            <!-- Left Side bar -->
+            <div class="col-md-4 notpadding">
+                    <div class="col-md-12 biodata notpadding">
+                            <div class="col-md-12 notpadding">
+                                <div class="col-md-2  notpadding"><i class="fa fa-globe globes" aria-hidden="true"></i></div>
+                                <div class="col-md-7 notpadding intro">Intro</div>
+                                    
+                            </div>
+                            <div class="col-md-12 notpadding messages">
+                                    <i class="fa fa-comment-o" aria-hidden="true"></i><br>
+                                    Add a short bio to tell people more about yourself.
+                                    <br>
+                                    <br>
+                                    
+                                        
+                            </div>
+                            <hr>
+                            <div class="col-md-12 notpadding" style="border-bottom: 1px solid #dddfe2;">
+                                    <table >
+                                        <tr>
+                                            <td style="text-align: center"><i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp;&nbsp; </td>
+                                            <td class="textformat">Software Development Engineer at <a href="#" class="organization"></a></td>
+                                            <td  ><a href="./profileedit.html"  class="editpencil" title="Edit Page"><i class="fa fa-pencil pencil" aria-hidden="true"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-briefcase"></i> &nbsp;&nbsp; </td>
+                                            <td class="textformat"> <span class="jobrole"></span>  at <a href="#" class="organization"></a></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp;&nbsp; </td>
+                                            <td class="textformat">College at <a href="#" class="college"></a></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp;&nbsp; </td>
+                                            <td class="textformat">School at <a href="#" class="school"></a></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-home" aria-hidden="true"></i> &nbsp;&nbsp; </td>
+                                            <td class="textformat">Lives in <a href="#"><span  class="live"></span><span  class="country"></span> </a></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;&nbsp; </td>
+                                            <td class="textformat">From <a href="#" class="from"></a> </td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                        
+                            </div>
+                            <div class="col-md-12 notpadding messages1">
+                                <i class="fa fa-star-o" aria-hidden="true"></i><br>
+                                Showcase what's important to you by adding photos, pages, groups and more to your featured section on your public profile.
+                                <br>
+                                <br>     
+                            </div>
+                           
+                        </div>
+                        <div class="gallery col-md-12">
+                            <div class="col-md-12 notpadding galleryheader">
+                                    <i class="fa fa-picture-o" aria-hidden="true" style="color:green"></i>
+                                    Photo
+                            </div>
+                            <div class="col-md-12 notpadding">
+                                    <div class="col-md-6 notpadding"><img class="img galleryimages img1" src="./images/dfb.jpg" alt="" ></div> 
+                                    <div class="col-md-6 notpadding"><img class="img galleryimages img2" src="./images/dhoni.jpg" alt="" ></div>
+                                    
+                            </div>
+                            <div class="col-md-12 notpadding">
+                                    <div class="col-md-6 notpadding"><img class="img galleryimages img3" src="./images/dhoniimg.jpg" alt="" ></div> 
+                                    <div class="col-md-6 notpadding"><img class="img galleryimages img4" src="./images/dhonitimeline.jpg" alt="" ></div>
+                                    
+                            </div>
+                           
+                           
+                                
+                        </div>
+            </div>
+            
+            <!-- Right Side bar -->
+            <div class="col-md-8 notrightpadding">
+                <div class="col-md-12 notpadding" id="contents">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <ul class="timeline">
+                                <li><i class="fa fa-pencil" aria-hidden="true"></i>  Create Post</li>
+                                <li><i class="fa fa-camera" aria-hidden="true"></i>  Photo/Video</li>
+                                <li><i class="fa fa-video-camera" aria-hidden="true"></i>  Live Video</li>
+                                <li><i class="fa fa-flag" aria-hidden="true"></i>  Live Events</li>
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="./images/dhoni.jpg" class="media-object img" style="width: 30px;
+                                        border-radius: 20%;">
+                                </div>
+                                <div class="media-body" data-toggle="modal" data-target="#myModal"> 
+                                          <p style="color:#ad94a9" >What's on your mind?</p>
+                                </div>
+                                <div class="blogfooter">
+                                        
+                                    <button >
+                                        <img src="./images/gallery.png" alt="" style="height: 20px;width: 20px;">
+                                                   Photo/video</button>
+                                    <button>
+                                        <img src="./images/tag.png" alt="" style="height: 20px;width: 20px;">
+                                                Tag Friends</button>
+                                    <button >
+                                        <img src="./images/smile.jpg" alt="" style="height: 20px;width: 20px;">
+                                            Feeling/Activ..</button>
+                                    <button>
+                                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+                                </div>
+                                              
+                            </div>
+ 
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                            <div class="panel-heading" style="background-color:white;border-color:white;">
+                                    <div class="media">
+                                            <div class="media-left">
+                                                <img src="./images/dhoni.jpg" class="media-object img" style="width: 50px;
+                                                    border-radius: 50%;">
+                                            </div>
+                                            <div class="media-body"> 
+                                                      <p style="color:#3170B0;">Dhoni  <span style="color: #ad94a9">Feeling</span>  happy <i class="fa fa-ellipsis-h" aria-hidden="true" style="float: right"></i></p>
+                                                      <span style="color:#616770;">April 18 Chennai <i class="fa fa-users" aria-hidden="true"></i>  <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                            </div>
+                                                          
+                                        </div>
+                            </div>
+                            <div class="panel-body">
+                                    <img src="./images/dhonitimeline.jpg" class="img" style="width: 506px;" >
+                                    <div class="timelineicons">
+                                        <button class="likes" data-toggle="popover" data-placement="top">
+                                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                                               Like</button>
+                                        <button class="commentsicon">
+                                            <img src="./images/comment.png" alt="" style="height: 20px;width: 20px;">
+                                                            Comments</button>
+                                        <button class="shareicon">
+                                                <i class="fa fa-share" aria-hidden="true"></i>
+                                                        Share</button>
+                                    </div>
+                                    <div class="media">
+                                            <div class="media-left">
+                                                    <img src="./images/dhoni.jpg" class="media-object img" style="width: 40px;
+                                                    border-radius: 50%;">
+                                            </div>
+                                            <div class="media-body">
+                                                    <div class="commentpanel">
+
+                                                            <input type="text" class="" placeholder="Write a Comment..."> 
+                                                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                                                            <i class="fa fa-camera" aria-hidden="true"></i>
+                                                            <img src="https://img.icons8.com/windows/32/000000/gif.png" style="width: 20px;">
+                                                    </div>
+                                            </div>
+                                          </div>
+                                    
+                                    
+                                    
+     
+                            </div>
+                        </div>
+                    <div class="panel panel-default">
+                                <div class="panel-heading" style="background-color:white;border-color:white;">
+                                        <div class="media">
+                                                <div class="media-left">
+                                                    <img src="./images/dhoni.jpg" class="media-object img" style="width: 50px;
+                                                        border-radius: 50%;">
+                                                </div>
+                                                <div class="media-body"> 
+                                                          <p style="color:#3170B0;">Dhoni  <span style="color: #ad94a9">Feeling</span>  happy <i class="fa fa-ellipsis-h" aria-hidden="true" style="float: right"></i></p>
+                                                          <span style="color:#616770;">April 18 Chennai <i class="fa fa-users" aria-hidden="true"></i>  <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                                                </div>
+                                                              
+                                            </div>
+                                </div>
+                                <div class="panel-body">
+                                        <img src="./images/dhoniimg.jpg" class="img" style="width: 506px;" >
+                                        <div class="timelineicons">
+                                            <button class="likes" data-toggle="popover" data-placement="top">
+                                                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                                                   Like</button>
+                                            <button class="commentsicon">
+                                                <img src="./images/comment.png" alt="" style="height: 20px;width: 20px;">
+                                                                Comments</button>
+                                            <button class="shareicon">
+                                                    <i class="fa fa-share" aria-hidden="true"></i>
+                                                            Share</button>
+                                        </div>
+                                        <div class="media">
+                                                <div class="media-left">
+                                                        <img src="./images/dhoni.jpg" class="media-object img" style="width: 40px;
+                                                        border-radius: 50%;">
+                                                </div>
+                                                <div class="media-body">
+                                                        <div class="commentpanel">
+    
+                                                                <input type="text" class="" placeholder="Write a Comment..."> 
+                                                                <i class="fa fa-smile-o" aria-hidden="true"></i>
+                                                                <i class="fa fa-camera" aria-hidden="true"></i>
+                                                                <img src="https://img.icons8.com/windows/32/000000/gif.png" style="width: 20px;">
+                                                        </div>
+                                                </div>
+                                              </div>
+                                        
+                                        
+                                        
+         
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create Post</h4>
+        </div>
+        
+        <div class="modal-body">
+                <div class="media-left">
+                        <img src="./images/dhoni.jpg" class="media-object img" style="width: 50px;
+                            border-radius: 50%;">
+                    </div>
+                    <div class="media-right">
+                            <textarea id="comment" placeholder="Write Something here..."  rows="3" cols="65" style="border: 1px;"></textarea>
+                        </div>
+        </div>
+        <div class="modal-footer blogfooter">
+            <button>color Picker:<input type="color" id="myColor" value="#ff0080"></button>
+                <input id='fileid' type='file' class="hidden"  />           
+                        <button id='buttonid' type='button' >
+                            <img src="./images/gallery.png" alt="" style="height: 20px;width: 20px;">
+                                       Photo/video</button>
+                        <button>
+                            <img src="./images/tag.png" alt="" style="height: 20px;width: 20px;">
+                                    Tag Friends</button>
+                        <button >
+                            <img src="./images/smile.jpg" alt="" style="height: 20px;width: 20px;">
+                                Feeling/Activ..</button>
+                        <button>
+                                <i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+                        <button onclick="post()" data-dismiss="modal" style="background-color: #3b5998;color:white"><i class="fa fa-share" aria-hidden="true"></i>Post</button>
+                   
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script>
+      document.getElementById('buttonid').addEventListener('click', openDialog);
+
+function openDialog() {
+  document.getElementById('fileid').click();
+}
+function post(){
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var monthsdate = today.getDate() +'   '+months[today.getMonth()];
+    var file=document.getElementById('fileid').value;
+
+    var filename=file.split('\\')[file.split('\\').length - 1];
+    var comment = document.getElementById('comment').value;
+    var colorpickers = document.getElementById("myColor").value;
+    var createpost = localStorage.getItem('createpost');
+    var cposts = JSON.parse(createpost);
+    if(cposts ==null){
+        cposts=[];
+    }
+    
+    var client1 = JSON.stringify({
+            Comment    : comment,
+            Filename  : filename,
+            datemonth : monthsdate,
+            colorpicker : colorpickers
+            });
+        cposts.push(client1);
+    localStorage.setItem("createpost", JSON.stringify(cposts));
+    
+
+    var dateTime = date+' '+time;
+    var activity = localStorage.getItem('activity');
+    var activitys = JSON.parse(activity);
+    if(activitys ==null){
+        activitys=[];
+    }
+    
+    var client2 = JSON.stringify({
+            title    : 'Create Post',
+            times  : dateTime,
+            datemonth : monthsdate
+            });
+    activitys.push(client2);
+    localStorage.setItem("activity", JSON.stringify(activitys));
+    document.location.reload();
+}
+
+function onpost(){
+    var tbClients = localStorage.getItem("createpost");//Retrieve the stored data
+            tbClients = JSON.parse(tbClients); //Converts string to object
+            if(tbClients == null) //If there is no data, initialize an empty array
+                tbClients = [];
+                var res = JSON.parse(localStorage.getItem('users'));   
+            var result=JSON.parse(res[0]);
+            var username=result.Username;
+            var count= tbClients.length;
+            count = count -1;
+            
+            for(var i=count;i =>0;i--){
+                var cli = JSON.parse(tbClients[i]);
+                var path='';
+                if(cli.Filename !=''){
+                    path='<img src="./images/'+cli.Filename+'" class="img" style="width: 506px;" >';
+                }
+              
+        $("#contents").append(' <div class="panel panel-default"><div class="panel-heading" style="background-color:white;border-color:white;">'+
+                            '<div class="media"><div class="media-left"><img src="./images/dhoni.jpg" class="media-object img" style="width: 50px;border-radius: 50%;">'+
+                            '</div><div class="media-body"><p style="color:#3170B0;">'+username+'  <span style="color: #ad94a9">Feeling</span>  happy <i class="fa fa-ellipsis-h" aria-hidden="true" style="float: right"></i></p>'+
+                            '<span style="color:#616770;">'+cli.datemonth+' Chennai <i class="fa fa-users" aria-hidden="true"></i>  <i class="fa fa-caret-down" aria-hidden="true"></i></span>'+
+                            '</div></div></div><div class="panel-body"><div style="background-color:'+cli.colorpicker+'">'+cli.Comment+'</div>'+path+'<div class="timelineicons">'+
+                             '<button class="likes" data-toggle="popover" data-placement="top"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>'+
+                            'Like</button><button class="commentsicon"><img src="./images/comment.png" alt="" style="height: 20px;width: 20px;">Comments</button><button class="shareicon">'+
+                            '<i class="fa fa-share" aria-hidden="true"></i>Share</button></div><div class="media"><div class="media-left"><img src="./images/dhoni.jpg" class="media-object img" style="width: 40px;border-radius: 50%;">'+
+                            '</div><div class="media-body"><div class="commentpanel"><input type="text" class="" placeholder="Write a Comment..."> <i class="fa fa-smile-o" aria-hidden="true"></i><i class="fa fa-camera" aria-hidden="true"></i>'+
+                            '<img src="https://img.icons8.com/windows/32/000000/gif.png" style="width: 20px;"></div></div></div></div></div>');
+           
+            }
+            
+
+}
+  </script>
+    

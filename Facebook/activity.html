@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Facebook- Activity Log</title>
+  <link rel="icon" type="image/ico" href="./images/f.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Css Part -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./activity.css">
+   <!-- Js Part -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./activity.js"></script>
+  <script src="./common.js"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    
+        
+        </script>
+    
+  <style>
+      
+  </style>
+  </head>
+<body onload="list()">
+    <div class="container-fluid navbg">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 ">
+            <div class="col-md-6 col-sm-12  col-xs-12">
+                <div  class="col-md-1 col-sm-2 col-xs-2">
+                        <img class="img fbicon " src="./images/download.png" alt="" >
+                </div>
+                <div  class="col-md-8 col-sm-8 col-xs-10">
+                        <div class="form-group" style="margin-bottom:0px;">
+                                <div class="input-group">
+                                    <input type="text" class="form-control "
+                                           placeholder="Search" id="inputGroup"/>
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                </div>
+                    
+                    
+            </div>
+            <div class="col-md-6 col-sm-12  col-xs-12">
+                <div class="media col-sm-6 col-xs-6 col-md-3">
+                            <div class="media-left">
+                              <img src="./images/dhoni.jpg" class="media-object img" style="width: 30px;
+                              border-radius: 50%;">
+                            </div>
+                            <div class="media-body">
+                              <a href="profile.html" class="ptitle uname"></a>
+                            </div>
+                </div>
+               <div class="col-md-9">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>                        
+                        </button>
+                      </div>
+                      <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                        
+                          <li><a href="profile.html"  title="Home">Home</a></li>
+                          <li><a href="#">Create</a></li>
+                          <li><a href="activity.html"  title="Activity Log">Activity Log</a></li>
+                          <li><a href="#" onclick="logout()"  title="Logout">Logout</a></li>
+                          <!--<li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-caret-down carets" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Activity Blog</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                          </li>-->
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+                  </div> 
+            </div>
+            
+        </div>
+    </div>
+    <div class="empty"></div>
+    <div class="container-fluid maincontent">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 ">
+                <div class="col-md-offset-3 col-sm-offset-3 col-lg-offset-3 col-md-6 col-sm-6 col-lg-6 col-xs-6 col-md-offset-3 ">
+                    <div class="well activity"><div class="col-md-2"><img src="./images/f.png" class="media-object img" style="width: 34px;"></div>Activity Log</div>    
+                    <div id="contents"></div>
+                    
+                </div>
+        </div>
+    </div>
+    
+   </body>
+   </html>
