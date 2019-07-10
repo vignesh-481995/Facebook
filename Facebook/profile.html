@@ -473,7 +473,7 @@ function onpost(){
               
         $("#contents").append(' <div class="panel panel-default"><div class="panel-heading" style="background-color:white;border-color:white;">'+
                             '<div class="media"><div class="media-left"><img src="./images/dhoni.jpg" class="media-object img" style="width: 50px;border-radius: 50%;">'+
-                            '</div><div class="media-body"><p style="color:#3170B0;">'+username+'  <span style="color: #ad94a9">Feeling</span>  happy <i class="fa fa-ellipsis-h" aria-hidden="true" style="float: right"></i></p>'+
+                            '</div><div class="media-body"><p style="color:#3170B0;">'+username+'  <span style="color: #ad94a9">Feeling</span>  happy <i class="fa fa-trash" aria-hidden="true" style="float: right" onclick="deletepost('+i+')"></i></p>'+
                             '<span style="color:#616770;">'+cli.datemonth+' Chennai <i class="fa fa-users" aria-hidden="true"></i>  <i class="fa fa-caret-down" aria-hidden="true"></i></span>'+
                             '</div></div></div><div class="panel-body"><div style="background-color:'+cli.colorpicker+'">'+cli.Comment+'</div>'+path+'<div class="timelineicons">'+
                              '<button class="likes" data-toggle="popover" data-placement="top"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>'+
@@ -485,6 +485,53 @@ function onpost(){
             }
             
 
+}
+     
+function deletepost(i){
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    var monthsdate = today.getDate() +'   '+months[today.getMonth()];
+    var r = confirm("Confirm Delete the Post?");
+    if (r == true) {
+    var createpost = localStorage.getItem('createpost');
+    var cposts = JSON.parse(createpost);
+    
+       var cpostsnew=[];
+
+    for(var j=0; j<cposts.length; j++){
+        if(i != j){
+            var res=JSON.parse(cposts[j]);
+        var client1 = JSON.stringify({
+            Comment    : res.Comment,
+            Filename  : res.Filename,
+            datemonth : res.datemonth,
+            colorpicker : res.colorpicker
+            });
+        cpostsnew.push(client1);
+        }
+        
+    }
+    
+   localStorage.setItem("createpost", JSON.stringify(cpostsnew));
+
+   var dateTime = date+' '+time;
+    var activity = localStorage.getItem('activity');
+    var activitys = JSON.parse(activity);
+    if(activitys ==null){
+        activitys=[];
+    }
+    
+    var client2 = JSON.stringify({
+            title    : 'Delete Post',
+            times  : dateTime,
+            datemonth : monthsdate
+            });
+    activitys.push(client2);
+    localStorage.setItem("activity", JSON.stringify(activitys));
+    document.location.reload();
+}
 }
   </script>
     
